@@ -38,14 +38,14 @@ class r24h extends conexion {
         }
         $query = "SELECT DISTINCT
                     dg_r24htabs.R24HTabsId,
-                    dg_r24htabs.descripcion
+                    dg_r24htabs.descripcion,
+                    dg_r24htabs.posicion
                 FROM
                 dg_r24h_precarga
                 INNER JOIN dg_r24htabs ON dg_r24htabs.R24HTabsId = dg_r24h_precarga.tabs
                 INNER JOIN dm_complejo ON dm_complejo.id_complejo = dg_r24h_precarga.complejoId
                 $condicion
-                order by 1";
-
+                order by 3";
        $datosTabs = parent::ObtenerDatos($query);
        $tabsCount =0;   // controla la posicion del array para el insert en la variable
 
@@ -66,7 +66,7 @@ class r24h extends conexion {
                                         dg_r24h_precarga
                                         INNER JOIN dm_equipos ON dg_r24h_precarga.equipoId = dm_equipos.equipoId                
                                       $condicionTabsEquipo
-                                      order by posicion";
+                                      order by 1";
 
                 $datosTabsEquipos = parent::ObtenerDatos($querytablsEquipos);
                 $estructuraR24H[$tabsCount]['TabsEquipos']=$datosTabsEquipos;   //inserta los equipos en el array de salida
