@@ -66,7 +66,7 @@ class r24h extends conexion {
                                         dg_r24h_precarga
                                         INNER JOIN dm_equipos ON dg_r24h_precarga.equipoId = dm_equipos.equipoId                
                                       $condicionTabsEquipo
-                                      order by 1";
+                                      order by posicion";
 
                 $datosTabsEquipos = parent::ObtenerDatos($querytablsEquipos);
                 $estructuraR24H[$tabsCount]['TabsEquipos']=$datosTabsEquipos;   //inserta los equipos en el array de salida
