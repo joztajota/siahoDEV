@@ -1,43 +1,29 @@
 <?php
 
-require_once 'clases/consumoApi.class.php';
 
 
-$api = new API;
-
-
-
-
+/***************llamado servicio */
+require_once ('clases/consumoApi.class.php');
 /* EJEMPLO PARA EL GET */
+
+//WS datos empleado
 $token = '5adb40fdd6f8eb4fd0523376538eb533';
-$URL	= 'http://localhost/siaho/funciones/wsdl/empleados?NumPersonal=1954558';
+$URL	= 'http://localhost/siaho/funciones/wsdl/empleados?NumPersonal=13336768';
 $rs 	= API::GET($URL,$token);
 $array  = API::JSON_TO_ARRAY($rs);
+$user = $array;
+$reporte24h= $user;
 
-print_r($array);
-die;
+$preCargaComplejo_id=$user[0]['complejoId'];
 
-
-
-/* EJEMPLO PARA EL POST */
-$parametros = array(
-	'header' 	=> array(
-                'turno'=> 1,
-                'supervisor'=>'jsantana',
-                'fecha'=>'2022/08/25'
-            ),
-	'tabs'	=> array(
-              'tabsid'=> 1,
-              "equipoId"=> '125631283',
-              'respuesta'=> 'si',
-              'observacion'=>"blablabla"
-            )
-);
-
+/* Ws  datos repoets24h */
 $token = '5adb40fdd6f8eb4fd0523376538eb533';
-$URL	='http://localhost/siaho/funciones/wsdl/auth';
-$rs = API::POST($URL,$token,$parametros);
-$rs = API::JSON_TO_ARRAY($rs);
+$URL	= "http://localhost/siaho/funciones/wsdl/r24h?preCargaComplejo_id=$preCargaComplejo_id";
+$rs 	= API::GET($URL,$token);
+$array  = API::JSON_TO_ARRAY($rs);
+$reporte24h= $array;
+//print_r($reporte24h);die;
+/******* */
 
 //print_r($rs);
 
