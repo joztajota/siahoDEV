@@ -9,5 +9,6 @@ $conexion = new conexion;
 
 
 ?>
+este cambio lo estoy haciendo enmi maquina personal (jsantana)
 
-Consulte al adminsitardor para que le de la informacion de los servicios para el sistema SIAHO ME Petroquimica
+
