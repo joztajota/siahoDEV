@@ -49,7 +49,7 @@ $image = "public/img/sistema/ADyCN.jpg";
                 <div class="mt-4" style="font-size: 1.75rem; color: #3e3e8c; font-weight: bold; <?php echo $color; ?>">
                         <?php
                         if ($bandera == 1) { ?>
-                                <img style="position: relative; center: 0px; top: 0px; width: 5%;" src="public/img/sistema/icon/r24h.png" />
+                                <img style="position: relative;  top: 0px; width: 5%;" src="public/img/sistema/icon/r24h.png" />
                                 &nbsp;
                         <?php echo "Crear Registro";
                         } else { ?>

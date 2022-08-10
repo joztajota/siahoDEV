@@ -10,4 +10,4 @@ $conexion = new conexion;
 
 ?>
 
-hola indez
+Consulte al adminsitardor para que le de la informacion de los servicios para el sistema SIAHO
