@@ -144,7 +144,7 @@ $image = "public/img/sistema/ADyCN.jpg";
                                                                         <?php
                                                                          // [0] => Array ( [tabs] => Array ( [R24HTabsId] 
                                                                          foreach($reporte24h as $tabs){
-                                                                              //print_r($tabs['tabs']['R24HTabsId']);die;
+                                                                             // print_r($tabs['tabs']['R24HTabsId']);die;
                                                                               echo " <li class='nav-item' role='presentation'>
                                                                               <button 
                                                                                         class='nav-link active' id='tabs-".$tabs['tabs']['R24HTabsId']."' 
@@ -154,7 +154,10 @@ $image = "public/img/sistema/ADyCN.jpg";
                                                                                         aria-controls='pills-home' 
                                                                                         aria-selected='true'><b>".$tabs['tabs']['descripcion']."</b>
                                                                                 </button>
-                                                                              </li> ";         
+                                                                              </li> ";   
+                                                                              
+                                                                              
+                                                                              
                                                                                 }
                                                                         ?>
                                                                 </ul>
