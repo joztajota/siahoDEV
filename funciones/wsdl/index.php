@@ -9,6 +9,6 @@ $conexion = new conexion;
 
 
 ?>
-este cambio lo estoy haciendo enmi maquina personal (jsantana)
+Comuniquese con el equipo de desarrollo apra que le den la informacion solicitada
 
 
